@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+
+<valgrindoutput>
+
+<protocolversion>4</protocolversion>
+<protocoltool>memcheck</protocoltool>
+
+<preamble>
+  <line>Memcheck, a memory error detector</line>
+  <line>Copyright (C) 2002-2010, and GNU GPL'd, by Julian Seward et al.</line>
+  <line>Using Valgrind-3.6.0.SVN-Debian and LibVEX; rerun with -h for copyright info</line>
+  <line>Command: bin/Debug/Dw </line>
+</preamble>
+
+<pid>14180</pid>
+<ppid>12651</ppid>
+<tool>memcheck</tool>
+
+<args>
+  <vargv>
+    <exe>/usr/bin/valgrind.bin</exe>
+    <arg>--suppressions=/usr/lib/valgrind/debian-libc6-dbg.supp</arg>
+    <arg>--leak-check=yes</arg>
+    <arg>--xml=yes</arg>
+    <arg>--xml-file=ValgrindOut.xml</arg>
+  </vargv>
+  <argv>
+    <exe>bin/Debug/Dw</exe>
+    <arg></arg>
+  </argv>
+</args>
+
+<status>
+  <state>RUNNING</state>
+  <time>00:00:00:00.063 </time>
+</status>
+
+
+<status>
+  <state>FINISHED</state>
+  <time>00:00:01:32.600 </time>
+</status>
+
+<error>
+  <unique>0x1b</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>144 bytes in 1 blocks are possibly lost in loss record 11 of 21</text>
+    <leakedbytes>144</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4024F12</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-x86-linux.so</obj>
+      <fn>calloc</fn>
+      <dir>/build/buildd/valgrind-3.6.0~svn20100724/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>467</line>
+    </frame>
+    <frame>
+      <ip>0x40117CB</ip>
+      <obj>/lib/ld-2.12.1.so</obj>
+      <fn>_dl_allocate_tls</fn>
+      <dir>/build/buildd/eglibc-2.12.1/elf</dir>
+      <file>dl-tls.c</file>
+      <line>300</line>
+    </frame>
+    <frame>
+      <ip>0x40786A9</ip>
+      <obj>/lib/libpthread-2.12.1.so</obj>
+      <fn>pthread_create@@GLIBC_2.1</fn>
+      <dir>/build/buildd/eglibc-2.12.1/nptl</dir>
+      <file>allocatestack.c</file>
+      <line>570</line>
+    </frame>
+    <frame>
+      <ip>0x8091C55</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D4core6thread6Thread5startMFZv</fn>
+      <dir>/home/g2/gcc/gdc/dev/gcc-4.4.5/objdir/i686-pc-linux-gnu/libphobos/../../../libphobos/core</dir>
+      <file>thread.d</file>
+      <line>803</line>
+    </frame>
+    <frame>
+      <ip>0x8058DEF</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D3std11concurrency13__T6_spawnTbZ6_spawnFbPFbZvbZS3std11concurrency3Tid</fn>
+      <dir>/opt/usr/local/bin/../lib/gcc/i686-pc-linux-gnu/4.4.5/../../../../include/d2/4.4.5/std</dir>
+      <file>concurrency.d</file>
+      <line>364</line>
+    </frame>
+    <frame>
+      <ip>0x8058D2C</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D3std11concurrency12__T5spawnTbZ5spawnFPFbZvbZS3std11concurrency3Tid</fn>
+      <dir>/opt/usr/local/bin/../lib/gcc/i686-pc-linux-gnu/4.4.5/../../../../include/d2/4.4.5/std</dir>
+      <file>concurrency.d</file>
+      <line>319</line>
+    </frame>
+    <frame>
+      <ip>0x8058C59</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_Dmain</fn>
+      <dir>/home/g2/comp/Dw/dw</dir>
+      <file>main.d</file>
+      <line>8</line>
+    </frame>
+    <frame>
+      <ip>0x808845A</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZi7runMainMFZv</fn>
+      <dir>/home/g2/gcc/gdc/dev/gcc-4.4.5/objdir/i686-pc-linux-gnu/libphobos/../../../libphobos/rt</dir>
+      <file>dmain2.d</file>
+      <line>537</line>
+    </frame>
+    <frame>
+      <ip>0x80884EE</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZi7tryExecMFMDFZvZv</fn>
+      <dir>/home/g2/gcc/gdc/dev/gcc-4.4.5/objdir/i686-pc-linux-gnu/libphobos/../../../libphobos/rt</dir>
+      <file>dmain2.d</file>
+      <line>482</line>
+    </frame>
+    <frame>
+      <ip>0x80887C3</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZi6runAllMFZv</fn>
+      <dir>/home/g2/gcc/gdc/dev/gcc-4.4.5/objdir/i686-pc-linux-gnu/libphobos/../../../libphobos/rt</dir>
+      <file>dmain2.d</file>
+      <line>552</line>
+    </frame>
+    <frame>
+      <ip>0x80884EE</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D2rt6dmain211_d_run_mainUiPPaPUAAaZiZi7tryExecMFMDFZvZv</fn>
+      <dir>/home/g2/gcc/gdc/dev/gcc-4.4.5/objdir/i686-pc-linux-gnu/libphobos/../../../libphobos/rt</dir>
+      <file>dmain2.d</file>
+      <line>482</line>
+    </frame>
+    <frame>
+      <ip>0x8088695</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_d_run_main</fn>
+      <dir>/home/g2/gcc/gdc/dev/gcc-4.4.5/objdir/i686-pc-linux-gnu/libphobos/../../../libphobos/rt</dir>
+      <file>dmain2.d</file>
+      <line>562</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x1c</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>144 bytes in 1 blocks are possibly lost in loss record 12 of 21</text>
+    <leakedbytes>144</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4024F12</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-x86-linux.so</obj>
+      <fn>calloc</fn>
+      <dir>/build/buildd/valgrind-3.6.0~svn20100724/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>467</line>
+    </frame>
+    <frame>
+      <ip>0x40117CB</ip>
+      <obj>/lib/ld-2.12.1.so</obj>
+      <fn>_dl_allocate_tls</fn>
+      <dir>/build/buildd/eglibc-2.12.1/elf</dir>
+      <file>dl-tls.c</file>
+      <line>300</line>
+    </frame>
+    <frame>
+      <ip>0x40786A9</ip>
+      <obj>/lib/libpthread-2.12.1.so</obj>
+      <fn>pthread_create@@GLIBC_2.1</fn>
+      <dir>/build/buildd/eglibc-2.12.1/nptl</dir>
+      <file>allocatestack.c</file>
+      <line>570</line>
+    </frame>
+    <frame>
+      <ip>0x8091C55</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D4core6thread6Thread5startMFZv</fn>
+      <dir>/home/g2/gcc/gdc/dev/gcc-4.4.5/objdir/i686-pc-linux-gnu/libphobos/../../../libphobos/core</dir>
+      <file>thread.d</file>
+      <line>803</line>
+    </frame>
+    <frame>
+      <ip>0x804C9A9</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D3std11concurrency11__T6_spawnZ6_spawnFbPFZvZS3std11concurrency3Tid</fn>
+      <dir>/opt/usr/local/bin/../lib/gcc/i686-pc-linux-gnu/4.4.5/../../../../include/d2/4.4.5/std</dir>
+      <file>concurrency.d</file>
+      <line>364</line>
+    </frame>
+    <frame>
+      <ip>0x804C8F0</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D3std11concurrency10__T5spawnZ5spawnFPFZvZS3std11concurrency3Tid</fn>
+      <dir>/opt/usr/local/bin/../lib/gcc/i686-pc-linux-gnu/4.4.5/../../../../include/d2/4.4.5/std</dir>
+      <file>concurrency.d</file>
+      <line>319</line>
+    </frame>
+    <frame>
+      <ip>0x804B178</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D2dw8executer8ExecuterFbZv</fn>
+      <dir>/home/g2/comp/Dw/dw</dir>
+      <file>executer.d</file>
+      <line>15</line>
+    </frame>
+    <frame>
+      <ip>0x8058CE8</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D3std11concurrency13__T6_spawnTbZ6_spawnFbPFbZvbZS3std11concurrency3Tid4execMFZv</fn>
+      <dir>/opt/usr/local/bin/../lib/gcc/i686-pc-linux-gnu/4.4.5/../../../../include/d2/4.4.5/std</dir>
+      <file>concurrency.d</file>
+      <line>360</line>
+    </frame>
+    <frame>
+      <ip>0x8090D66</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>thread_entryPoint</fn>
+      <dir>/home/g2/gcc/gdc/dev/gcc-4.4.5/objdir/i686-pc-linux-gnu/libphobos/../../../libphobos/core</dir>
+      <file>thread.d</file>
+      <line>429</line>
+    </frame>
+    <frame>
+      <ip>0x4077CC8</ip>
+      <obj>/lib/libpthread-2.12.1.so</obj>
+      <fn>start_thread</fn>
+      <dir>/build/buildd/eglibc-2.12.1/nptl</dir>
+      <file>pthread_create.c</file>
+      <line>304</line>
+    </frame>
+    <frame>
+      <ip>0x415C69D</ip>
+      <obj>/lib/libc-2.12.1.so</obj>
+      <fn>clone</fn>
+      <dir>/build/buildd/eglibc-2.12.1/misc/../sysdeps/unix/sysv/linux/i386</dir>
+      <file>clone.S</file>
+      <line>130</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x1d</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>144 bytes in 1 blocks are possibly lost in loss record 13 of 21</text>
+    <leakedbytes>144</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4024F12</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-x86-linux.so</obj>
+      <fn>calloc</fn>
+      <dir>/build/buildd/valgrind-3.6.0~svn20100724/coregrind/m_replacemalloc</dir>
+      <file>vg_replace_malloc.c</file>
+      <line>467</line>
+    </frame>
+    <frame>
+      <ip>0x40117CB</ip>
+      <obj>/lib/ld-2.12.1.so</obj>
+      <fn>_dl_allocate_tls</fn>
+      <dir>/build/buildd/eglibc-2.12.1/elf</dir>
+      <file>dl-tls.c</file>
+      <line>300</line>
+    </frame>
+    <frame>
+      <ip>0x40786A9</ip>
+      <obj>/lib/libpthread-2.12.1.so</obj>
+      <fn>pthread_create@@GLIBC_2.1</fn>
+      <dir>/build/buildd/eglibc-2.12.1/nptl</dir>
+      <file>allocatestack.c</file>
+      <line>570</line>
+    </frame>
+    <frame>
+      <ip>0x8091C55</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D4core6thread6Thread5startMFZv</fn>
+      <dir>/home/g2/gcc/gdc/dev/gcc-4.4.5/objdir/i686-pc-linux-gnu/libphobos/../../../libphobos/core</dir>
+      <file>thread.d</file>
+      <line>803</line>
+    </frame>
+    <frame>
+      <ip>0x804CAE1</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D3std11concurrency34__T6_spawnTS3std11concurrency3TidZ6_spawnFbPFS3std11concurrency3TidZvS3std11concurrency3TidZS3std11concurrency3Tid</fn>
+      <dir>/opt/usr/local/bin/../lib/gcc/i686-pc-linux-gnu/4.4.5/../../../../include/d2/4.4.5/std</dir>
+      <file>concurrency.d</file>
+      <line>364</line>
+    </frame>
+    <frame>
+      <ip>0x804CA1F</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D3std11concurrency33__T5spawnTS3std11concurrency3TidZ5spawnFPFS3std11concurrency3TidZvS3std11concurrency3TidZS3std11concurrency3Tid</fn>
+      <dir>/opt/usr/local/bin/../lib/gcc/i686-pc-linux-gnu/4.4.5/../../../../include/d2/4.4.5/std</dir>
+      <file>concurrency.d</file>
+      <line>319</line>
+    </frame>
+    <frame>
+      <ip>0x804B198</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D2dw8executer8ExecuterFbZv</fn>
+      <dir>/home/g2/comp/Dw/dw</dir>
+      <file>executer.d</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x8058CE8</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>_D3std11concurrency13__T6_spawnTbZ6_spawnFbPFbZvbZS3std11concurrency3Tid4execMFZv</fn>
+      <dir>/opt/usr/local/bin/../lib/gcc/i686-pc-linux-gnu/4.4.5/../../../../include/d2/4.4.5/std</dir>
+      <file>concurrency.d</file>
+      <line>360</line>
+    </frame>
+    <frame>
+      <ip>0x8090D66</ip>
+      <obj>/home/g2/comp/Dw/bin/Debug/Dw</obj>
+      <fn>thread_entryPoint</fn>
+      <dir>/home/g2/gcc/gdc/dev/gcc-4.4.5/objdir/i686-pc-linux-gnu/libphobos/../../../libphobos/core</dir>
+      <file>thread.d</file>
+      <line>429</line>
+    </frame>
+    <frame>
+      <ip>0x4077CC8</ip>
+      <obj>/lib/libpthread-2.12.1.so</obj>
+      <fn>start_thread</fn>
+      <dir>/build/buildd/eglibc-2.12.1/nptl</dir>
+      <file>pthread_create.c</file>
+      <line>304</line>
+    </frame>
+    <frame>
+      <ip>0x415C69D</ip>
+      <obj>/lib/libc-2.12.1.so</obj>
+      <fn>clone</fn>
+      <dir>/build/buildd/eglibc-2.12.1/misc/../sysdeps/unix/sysv/linux/i386</dir>
+      <file>clone.S</file>
+      <line>130</line>
+    </frame>
+  </stack>
+</error>
+
+<errorcounts>
+</errorcounts>
+
+<suppcounts>
+  <pair>
+    <count>17</count>
+    <name>dl-hack3-cond-1</name>
+  </pair>
+</suppcounts>
+
+</valgrindoutput>
+
