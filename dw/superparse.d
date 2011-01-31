@@ -54,7 +54,15 @@ DValue Eval ( ref node!Token no, ref zscope soc ) {
                 case "call":
                     if(no.values.data.length < 2)return DValue(EX("Wrong number of arguments for 'call'"));
                     auto fun = eval(no.values.data[1]);
-                    //node!Token[] fun2 = fun.peek!node!Token[])
+                    node!Token[]* fun2 = fun.peek!(node!(Token)[]);
+                    if (fun2 is null) return DValue(EX("Wrong type of arguments for 'call'"));
+                    if((*fun2).length == 1){
+                        return eval((*fun2)[0]);
+                    }else if((*fun2).length == 2){
+
+                    }else{
+                        return DValue(EX("Non function argument used for 'call'"));
+                    }
                 default:
                   DValue[] a;
                   a.length = no.values.data.length;
