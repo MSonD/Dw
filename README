@@ -1,0 +1,24 @@
+Dw
+DW is a experimental lisp-like scripting language.
+Right now is nearly useless.
+
+Examples:
+
+
+(+ 5 7)
+=> 12
+
+5 (* 5 1)
+=>[5 5]
+
+let x (def (+ 4 2))
+=> //some tokens
+
+call x
+=> 6
+
+
+The lexer is really stable and even uses message passing to send tokens to the parser.
+Tree building is quite ugly and there is room for optimization.
+Parsing is really messy and there are lots of this to improve
+ (hint, using std.variant all the way around[quite useful but costly < I think >] )
