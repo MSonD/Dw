@@ -38,7 +38,7 @@ struct Token
 {
     string toString()
     {
-        return token~"→"~to_string(type);
+        return token~" as "~to_string(type);
     }
     TOKEN type;
     STR token;

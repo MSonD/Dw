@@ -5,9 +5,18 @@ import dw.token;
 import dw.treebuild;
 import dw.value;
 import dw.impl;
-
+alias DValue delegate (DValue[]...) DFun;
 DValue findval(ref SList!zscope x,string name){
     DValue* val;
+    switch(name){
+        case "true":
+            return DValue(true);
+        case "false":
+            return DValue(false);
+        case "nil":
+            return DValue(NIL());
+        default:
+    }
     foreach(a;x){
         val = name in a;
         if(val !is null) return *val;
@@ -63,6 +72,21 @@ DValue Eval ( ref node!Token no, ref zscope soc ) {
                     }else{
                         return DValue(EX("Non function argument used for 'call'"));
                     }
+                case "len":
+                  if(no.values.data.length < 2)return DValue(EX("Wrong number of arguments for 'len'"));
+                  if(no.values.data[1].sym.type != TOKEN.O_PAR) return DValue(1);
+                  auto val = eval(no.values.data[1]);
+                  if(val.peek!(void[]) is null) return DValue(1);
+                  return DValue(val.length);
+                case "if":
+                  if(no.values.data.length < 4)return DValue(EX("Wrong number of arguments for 'if'"));
+                  auto val = eval(no.values.data[1]).peek!bool;
+                  if(val is null)return (DValue(EX("Expression not evaluates to bool for 'if'")));
+                  else if(*val){
+                    return eval(no.values.data[2]);
+                  }else{
+                    return eval(no.values.data[3]);
+                  }
                 default:
                   DValue[] a;
                   a.length = no.values.data.length;

@@ -4,45 +4,39 @@
 	<Project>
 		<Option title="Dw" />
 		<Option pch_mode="2" />
-		<Option compiler="gdc" />
+		<Option compiler="dmd" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Dw" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
+				<Option output="bin\Debug\Dw" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
 				<Option type="1" />
-				<Option compiler="gdc" />
+				<Option compiler="dmd" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Dw" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
+				<Option output="bin\Release\Dw" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
 				<Option type="1" />
-				<Option compiler="gdc" />
-				<Compiler>
-					<Add option="-O2" />
-				</Compiler>
+				<Option compiler="dmd" />
 				<Linker>
 					<Add option="-s" />
 				</Linker>
 			</Target>
 		</Build>
-		<Compiler>
-			<Add option="-Wall" />
-		</Compiler>
-		<Unit filename="dw/_version.d" />
-		<Unit filename="dw/def.d" />
-		<Unit filename="dw/except.d" />
-		<Unit filename="dw/executer.d" />
-		<Unit filename="dw/impl.d" />
-		<Unit filename="dw/lang.d" />
-		<Unit filename="dw/main.d" />
-		<Unit filename="dw/meta.d" />
-		<Unit filename="dw/superparse.d" />
-		<Unit filename="dw/token.d" />
-		<Unit filename="dw/treebuild.d" />
-		<Unit filename="dw/value.d" />
+		<Unit filename="dw\_version.d" />
+		<Unit filename="dw\def.d" />
+		<Unit filename="dw\except.d" />
+		<Unit filename="dw\executer.d" />
+		<Unit filename="dw\impl.d" />
+		<Unit filename="dw\lang.d" />
+		<Unit filename="dw\main.d" />
+		<Unit filename="dw\meta.d" />
+		<Unit filename="dw\superparse.d" />
+		<Unit filename="dw\token.d" />
+		<Unit filename="dw\treebuild.d" />
+		<Unit filename="dw\value.d" />
 		<Extensions>
 			<code_completion />
 			<debugger />

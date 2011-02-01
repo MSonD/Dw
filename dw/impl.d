@@ -15,6 +15,7 @@ version(D_Version2)
     import core.memory;
 
     alias writeln _objout;
+    alias writeln _objerr;
     alias write _write;
     alias readln _read_line;
     alias toStringNow stringnow;
