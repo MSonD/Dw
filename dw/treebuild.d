@@ -111,6 +111,7 @@ struct node ( T ) {
   node! ( T )  *up;
   Appender! ( node! ( T ) [] ) values;
   size_t nb = 0;
+  alias values this;
   string toString() {
     if ( sym.type != TOKEN.O_PAR && sym.type != TOKEN.HEAD ) return to_string ( sym );
     else return "{"~to_string ( sym ) ~"}"~to_string ( values.data );

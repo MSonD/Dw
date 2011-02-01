@@ -7,6 +7,8 @@
 	<dw/def.d>
 	<dw/treebuild.d>
 
+1296346356 ild.d>
+
 1296346356 source:/home/g2/comp/Dw/dw/main.d
 	<dw/executer.d>
 	<std/concurrency.d>
@@ -25,6 +27,8 @@
 	<std/conv.d>
 	<core/memory.d>
 
+1296504974 ry.d>
+
 1296337497 source:/home/g2/comp/Dw/dw/token.d
 	<dw/impl.d>
 	<dw/except.d>
@@ -32,8 +36,12 @@
 	<dw/def.d>
 	<std/concurrency.d>
 
+1296505196 rrency.d>
+
 1296366905 /home/g2/comp/Dw/dw/impl.d
 	<dw/def.d>
+
+1296504974 
 
 1296003454 source:/home/g2/comp/Dw/dw/def.d
 
@@ -41,6 +49,8 @@
 
 1295412986 source:/home/g2/comp/Dw/dw/meta.d
 	<dw/impl.d>
+
+1296505664 >
 
 1295412968 source:/home/g2/comp/Dw/dw/_version.d
 	<dw/impl.d>
@@ -58,6 +68,8 @@
 	<std/array.d>
 	<dw/impl.d>
 	<std/variant.d>
+
+1296446918 nt.d>
 
 1296449278 source:/home/g2/comp/Dw/dw/treebuild.d
 	<std/array.d>
@@ -170,4 +182,82 @@
 	<dw/treebuild.d>
 	<dw/value.d>
 	<dw/impl.d>
+
+1295412968 source:/home/g2/comp/Dw/dw/_version.d
+	<dw/impl.d>
+
+1296520500 /home/g2/comp/Dw/dw/impl.d
+	<dw/def.d>
+
+1296003454 /home/g2/comp/Dw/dw/def.d
+
+1296003454 source:/home/g2/comp/Dw/dw/def.d
+
+1295412923 source:/home/g2/comp/Dw/dw/except.d
+
+1296351502 source:/home/g2/comp/Dw/dw/executer.d
+	<std/concurrency.d>
+	<core/thread.d>
+	<dw/impl.d>
+	<dw/token.d>
+	<dw/def.d>
+	<dw/treebuild.d>
+
+1296520500 /home/g2/comp/Dw/dw/token.d
+
+1296521173 /home/g2/comp/Dw/dw/treebuild.d
+
+1296366803 source:/home/g2/comp/Dw/dw/lang.d
+
+1296346356 source:/home/g2/comp/Dw/dw/main.d
+	<dw/executer.d>
+	<std/concurrency.d>
+	<std/stdio.d>
+	<std/string.d>
+	<dw/treebuild.d>
+
+1296351502 /home/g2/comp/Dw/dw/executer.d
+
+1295412986 source:/home/g2/comp/Dw/dw/meta.d
+	<dw/impl.d>
+
+1296446918 source:/home/g2/comp/Dw/dw/value.d
+	<dw/def.d>
+	<std/array.d>
+	<dw/impl.d>
+	<std/variant.d>
+
+1296520500 source:/home/g2/comp/Dw/dw/impl.d
+	<dw/def.d>
+	<std/stdio.d>
+	<std/metastrings.d>
+	<std/utf.d>
+	<std/ctype.d>
+	<std/conv.d>
+	<core/memory.d>
+
+1296520500 source:/home/g2/comp/Dw/dw/token.d
+	<dw/impl.d>
+	<dw/except.d>
+	<dw/meta.d>
+	<dw/def.d>
+	<std/concurrency.d>
+
+1295412923 /home/g2/comp/Dw/dw/except.d
+
+1295412986 /home/g2/comp/Dw/dw/meta.d
+
+1296521173 source:/home/g2/comp/Dw/dw/treebuild.d
+	<std/array.d>
+	<dw/value.d>
+	<dw/impl.d>
+	<dw/except.d>
+	<dw/def.d>
+	<dw/token.d>
+	<dw/superparse.d>
+	<std/concurrency.d>
+
+1296446918 /home/g2/comp/Dw/dw/value.d
+
+1296521272 /home/g2/comp/Dw/dw/superparse.d
 
