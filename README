@@ -14,11 +14,23 @@ Examples:
 let x (def (+ 4 2))
 => //some tokens
 
-call x
+x
 => 6
+
+if (> 9 8) ("GOOd")("not good")
+
+=> "GOOd"
+
+let super (def (x y) (+ (* x x) (* y y)))
+
+=> //a lot of tokens
+
+super 2 3
+
+=> 13
 
 
 The lexer is really stable and even uses message passing to send tokens to the parser.
 Tree building is quite ugly and there is room for optimization.
-Parsing is really messy and there are lots of this to improve
+Parsing is messy and there are lots of things to improve
  (hint, using std.variant all the way around[quite useful but costly < I think >] )
