@@ -207,10 +207,10 @@ void TokenServer(Tid write){
 pure TOKEN getType(STR typof)
 {
     TOKEN type;
-    if(isNb(typof[0]))
+    if(isNb(typof[0]) || typof[0] == '-')
     {
         type = TOKEN.INT;
-        foreach(c; typof)
+        foreach(c; typof[1..$])
         {
             if(type == TOKEN.INT)
             {

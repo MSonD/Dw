@@ -44,6 +44,10 @@ class Scope {
       binding["*"] = &_mul;
       binding["~"] = &_con;
       binding["/"] = &_div;
+      binding[">"] = &_greater;
+      binding["<"] = &_minor;
+      binding["="] = &_equal;
+      binding["-"] = &_less;
       binding["idx"] = &_idx;
       dlgd["clean"] = &clean;
     }
@@ -69,6 +73,24 @@ class Scope {
 DValue _add ( DValue[] vals... ) {
   return reduce! ( "a + b" ) ( vals[0], vals[1..$] );
 }
+DValue _greater( DValue[] vals... ) {
+    foreach(a;vals[1..$]){
+        if( vals[0] <= a) return DValue(false);
+    }
+  return DValue(true);
+}
+DValue _minor ( DValue[] vals... ) {
+  foreach(a;vals[1..$]){
+        if( vals[0] >= a) return DValue(false);
+    }
+  return DValue(true);
+}
+DValue _equal ( DValue[] vals... ) {
+  foreach(a;vals[1..$]){
+        if( vals[0] != a) return DValue(false); //may optimize
+    }
+  return DValue(true);
+}
 DValue _mul ( DValue[] vals... ) {
   return reduce! ( "a * b" ) ( vals[0], vals[1..$] );
 }
@@ -77,6 +99,9 @@ DValue _con ( DValue[] vals... ) {
 }
 DValue _div ( DValue[] vals... ) {
   return reduce! ( "a / b" ) ( vals[0], vals[1..$] );
+}
+DValue _less ( DValue[] vals... ) {
+  return reduce! ( "a - b" ) ( vals[0], vals[1..$] );
 }
 DValue _idx ( DValue[] vals... ) {
   _objout ( "being called", vals );
