@@ -14,9 +14,9 @@ void BuildTree ( Tid write, Tid mgr ) {
   top = Token();
   auto tr = new tree ( Token.init );
   size_t parens;
-  zscope ocope;
+  Scope ocope = new Scope();
+  ocope.loadPrelude();
   bool noignore = true; //HACK to avoid sending mismatched parens tree
-  ocope["_version"] = DValue ( [0, 0, 1] ); // somethin prevents me using an empty aa
   void push ( immutable ( Token ) [] a ) {
     foreach ( tok; a ) {
       switch ( tok.type ) {

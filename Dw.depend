@@ -205,7 +205,7 @@
 
 1296520500 /home/g2/comp/Dw/dw/token.d
 
-1296521173 /home/g2/comp/Dw/dw/treebuild.d
+1296592748 /home/g2/comp/Dw/dw/treebuild.d
 
 1296366803 source:/home/g2/comp/Dw/dw/lang.d
 
@@ -259,5 +259,13 @@
 
 1296446918 /home/g2/comp/Dw/dw/value.d
 
-1296521272 /home/g2/comp/Dw/dw/superparse.d
+1296534763 /home/g2/comp/Dw/dw/superparse.d
+
+1296530065 source:/home/g2/comp/Dw/dw/superparse.d
+	<std/algorithm.d>
+	<std/container.d>
+	<dw/token.d>
+	<dw/treebuild.d>
+	<dw/value.d>
+	<dw/impl.d>
 
